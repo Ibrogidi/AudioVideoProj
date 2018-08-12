@@ -1,5 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+:root{
+  --mainRed:#D93034;
+  --mainWhite:#FFFFFF;
+  --mainBlack:#292F36;
+  --mainGrey:#F6F6F6;
+}
+
 body{
-font-family: 'Courgette', cursive;
+  font-family: 'Roboto', sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+}
 
+.header{
+  overflow: hidden;
+  clip-path: polygon(0 0,100% 0,100% 95%,50% 100%,0 95%);
+  color: var(--mainWhite);
+}
+.height-60{
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('../img/headerBcg.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  animation-name: zoom;
+  animation-duration: 20s;
+animation-iteration-count:infinite;
+animation-delay: 5s
+}
 
+@keyframes zoom{
+  0%{
+    transform: scale(1)
+  }
+  50%{
+    transform: scale(1.2) translateX(-5%)
+  }
+  100%{
+    transform: scale(1)
+  }
+}
+.title-heading{
+  background: rgba(0,0,0,0.4);
+  border-left: 0.3rem solid var(--mainRed);
+}
+.title{
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+@media screen and (min-width:768px){
+  .title{
+    font-size: 3rem;
+  }
+}
+.title-icon{
+  color: var(--mainRed);
+  text-decoration:none;
+}
+.title-icon:hover{
+  color: var(--mainRed);
+  opacity: 0.6;
+}
+/* skills section */
+.skills-icon{
+  font-size: 3rem;
+  color: var(--mainRed);
+  background: var(--mainGrey);
+}
+.skills-icon:hover{
+  color: var(--mainRed);
+}
+.skills-underline{
+  width: 4rem;
+  height: 0.3rem;
+  background: var(--mainRed);
+  margin: 1rem auto;
 }
