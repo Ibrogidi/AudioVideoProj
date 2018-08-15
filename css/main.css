@@ -74,7 +74,7 @@ background: var(--mainWhite);
   color: var(--mainWhite);
 }
 .height-60{
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - 76px);
   background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('../img/headerBcg.jpeg');
   background-position: center;
   background-size: cover;
